@@ -1,0 +1,82 @@
+%%=======================================================================================%%
+%% Jonah Duncan, 07/25/22, pdfLaTeX - Created                                            %%
+%%=======================================================================================%%
+\ProvidesPackage{config}
+
+%%==Packages=============================================================================%%
+\usepackage[letterpaper,margin=1in,]{geometry}%showframe
+
+%\usepackage{libertinus}%Former Default
+%\usepackage[sfdefault,light,condensed]{roboto}%Roboto Light Condensed
+\usepackage[sfdefault]{carlito}
+%\usepackage[default]{sourcesanspro} %Source Sans Pro
+\usepackage[T1]{fontenc}
+\usepackage[final,tracking=true,kerning=true,spacing=true,
+            factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage{xcolor}
+\usepackage{imakeidx}
+\usepackage{xstring}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{import}
+\usepackage[normalem]{ulem}
+\usepackage{amssymb}
+
+%%==Configuration========================================================================%%
+\microtypecontext{spacing=nonfrench}
+\hbadness=99999
+\renewcommand{\baselinestretch}{1.4}
+\pagestyle{empty}\let\svmaketitle\maketitle\def\maketitle{\svmaketitle\thispagestyle{empty}}
+\setlength\ULdepth{0.425em}
+\renewcommand\ULthickness{0.08em}%think moar
+%\hypersetup{pdftoolbar=false,pdfmenubar=false,pdffitwindow=false,pdfwindowui=false}
+
+%%==Commands=============================================================================%%
+\newcommand{\hOne}[2]{{\color{#1}{\noindent{}\large{%
+                      \uline{#2}}\normalsize}}\\[-1.825em]}
+\newcommand{\fns}[1]{\fontsize{#1pt*1pt}{#1pt*1pt*1.4}}%    was 15, 21
+\newcommand{\ih}{\textbf{I have... }}
+\newcommand\sbullet[1][.25]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\blacksquare$}}}}}
+\newcommand{\sqpt}{$\sbullet$\hspace{0.25ex}}
+\newcommand{\fb}{\filbreak}
+\newcommand{\ra}{\Rightarrow}
+%\newcommand{\sqpt}{\fns{3}$\blacksquare$\normalsize{}\hspace{0.25ex}}
+%\newcommand{\sqpt}{\scriptsize$\blacksquare$\normalsize{}\hspace{0.25ex}}
+%\newcommand{\heading}[1]{{\color{WWU DBP}{\textit{\textbf{#1}}}}}
+
+%%==Environments=========================================================================%%
+
+%%==Colors===============================================================================%%
+\definecolor{wwuDBP}{HTML}{003F87}
+\definecolor{wwuBP}{HTML}{007AC8}
+\definecolor{gg1}{HTML}{808080}
+\definecolor{gg2}{HTML}{B2BEB5}
+\definecolor{gg3}{HTML}{36454F}
+\definecolor{gg4}{HTML}{A9A9A9}
+\definecolor{gg5}{HTML}{899499}
+\definecolor{gg6}{HTML}{708090}
+\definecolor{gg7}{HTML}{2F4F4F}
+\definecolor{qgreen}{HTML}{088DA5}
+\definecolor{MSgreen}{HTML}{7FBA00}
+\definecolor{MSorangered}{HTML}{F25022}
+\definecolor{MSblue}{HTML}{00A4EF}
+\definecolor{MSyellow}{HTML}{FFB900}
+\definecolor{MSgray}{HTML}{737373}
+\definecolor{Gblue}{HTML}{4285F4}
+\definecolor{Gred}{HTML}{DB4437}
+\definecolor{Gyellow}{HTML}{F4B400}
+\definecolor{Ggreen}{HTML}{0F9D58}
+\definecolor{xbox}{HTML}{107C10}
+\definecolor{lgrayA}{HTML}{F1F1F1}
+\definecolor{lgrayB}{HTML}{F9F9F9}
+
+%%==Notes================================================================================%%
+%____\newenvironment{name}[numarg][optarg_default]{begin_def}{end_def}
+%____\renewenvironment{def_name}[numarg][optarg_default]{begin_def}{end_def}
+%____\renewcommand{\def_name}{command_matter}
+%____\newcommand{\name}[1]{command_matter}
